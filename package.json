@@ -53,7 +53,6 @@
     "@rspack/cli": "^0.1.6",
     "@storybook/addon-a11y": "^7.0.2",
     "@storybook/addon-essentials": "^7.0.2",
-    "@storybook/builder-vite": "^7.0.2",
     "@storybook/react": "^7.0.2",
     "@storybook/react-vite": "^7.0.2",
     "@storybook/testing-library": "^0.0.14-next.2",

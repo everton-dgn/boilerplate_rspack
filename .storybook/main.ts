@@ -4,8 +4,7 @@ const config: StorybookConfig = {
   stories: ['../src/ui/@(components|templates)/**/storybook/stories.@(js|ts)x'],
   addons: ["@storybook/addon-links", '@storybook/addon-essentials', "@storybook/addon-interactions"],
   core: {
-    disableTelemetry: true,
-    builder: '@storybook/builder-vite'
+    disableTelemetry: true
   },
   previewHead: head => `
     ${head}
@@ -35,6 +34,9 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: true
+  },
+  typescript: {
+    reactDocgen: 'react-docgen'
   }
 }
 

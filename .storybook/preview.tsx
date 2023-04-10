@@ -1,9 +1,9 @@
-// import { MainProviders } from '../src/ui/providers'
+import { MainProviders } from '../src/ui/providers'
 
 export const decorators = [
   (Story: any) => (
-    // <MainProviders>
+    <MainProviders>
       <Story />
-    // </MainProviders>
+    </MainProviders>
   )
 ]

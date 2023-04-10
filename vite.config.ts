@@ -5,8 +5,18 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
   base: '/',
+  root: 'src',
   build: {
     sourcemap: true
   },
-  plugins: [tsconfigPaths(), react(), svgr()]
+  plugins: [tsconfigPaths(), react(), svgr()],
+  test: {
+    globals: true,
+    environment: 'happy-dom',
+    setupFiles: ['./.test/setup.ts'],
+    coverage: {
+      provider: 'istanbul',
+      exclude: ['src/testHelpers/', 'src/ui/components/templates/index.tsx']
+    }
+  }
 })
