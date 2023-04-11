@@ -40,4 +40,4 @@ yarn.lock
 /src/stories
 
 # typescript incremental features
-/.tsBuildInfoFile/
+/.tsBuildInfo

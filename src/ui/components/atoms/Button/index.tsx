@@ -2,7 +2,7 @@ import { forwardRef } from 'react'
 import * as S from './styles'
 import { BtnProps } from './types'
 
-export const Button = forwardRef<HTMLButtonElement, BtnProps>(
+const Button = forwardRef<HTMLButtonElement, BtnProps>(
   ({ icon, text, ...props }, ref) => (
     <S.Container {...props} ref={ref}>
       {icon}
@@ -10,3 +10,5 @@ export const Button = forwardRef<HTMLButtonElement, BtnProps>(
     </S.Container>
   )
 )
+
+export default Button
