@@ -1,6 +1,8 @@
+// @ts-check
+const { defineConfig } = require('@rspack/cli')
 const { config } = require('dotenv')
 
-module.exports = (env, argv) => {
+const configRoot = defineConfig((env, argv) => {
   const { parsed } = config({
     path: argv.dotenv
   })
@@ -15,7 +17,9 @@ module.exports = (env, argv) => {
     output: {
       clean: true,
       publicPath: `${PUBLIC_PATH}/`,
-      chunkFilename: isLocal ? '[name][ext]' : '[name].[contenthash:8][ext]'
+      chunkFilename: isLocal ? '[name][ext]' : '[name].[contenthash:8][ext]',
+      chunkLoadingGlobal: 'rspackChunkLoadCustomConfig',
+      crossOriginLoading: 'anonymous'
     },
     optimization: {
       runtimeChunk: 'single',
@@ -67,4 +71,6 @@ module.exports = (env, argv) => {
     },
     target: 'web'
   }
-}
+})
+
+module.exports = configRoot
