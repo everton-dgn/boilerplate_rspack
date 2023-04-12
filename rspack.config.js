@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { config } = require('dotenv')
 
 module.exports = (env, argv) => {
@@ -14,6 +13,7 @@ module.exports = (env, argv) => {
     entry: './src/main/index.tsx',
     devtool: isLocal ? 'eval-source-map' : false,
     output: {
+      clean: true,
       publicPath: `${PUBLIC_PATH}/`,
       chunkFilename: isLocal ? '[name][ext]' : '[name].[contenthash:8][ext]'
     },
@@ -39,12 +39,17 @@ module.exports = (env, argv) => {
     module: {
       rules: [
         {
-          test: /\.(webp|png|jpe?g|svg|gif)$/i,
+          test: /\.(webp|png|jpe?g|gif)$/i,
           type: 'asset/resource'
         },
         {
           test: /^BUILD_ID$/,
           type: 'asset/source'
+        },
+        {
+          test: /\.svg$/i,
+          issuer: /\.tsx?$/,
+          use: ['@svgr/webpack']
         }
       ]
     },

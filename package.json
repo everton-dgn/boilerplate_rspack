@@ -9,8 +9,6 @@
   "main": "./src/index.js",
   "scripts": {
     "dev": "NODE_ENV=development rspack serve --dotenv .env.local",
-    "clean": "rm -rf dist/*",
-    "prebuild:local": "npm run clean",
     "build:local": "NODE_ENV=development rspack build --dotenv .env.local",
     "build:dev": "NODE_ENV=production rspack build --dotenv .env.dev",
     "build:prod": "NODE_ENV=production rspack build --dotenv .env.prod",
@@ -50,7 +48,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.5.1",
     "@commitlint/config-conventional": "17.4.4",
-    "@rspack/cli": "^0.1.6",
+    "@rspack/cli": "^0.1.7",
     "@storybook/addon-a11y": "^7.0.2",
     "@storybook/addon-essentials": "^7.0.2",
     "@storybook/addon-interactions": "^7.0.2",
@@ -58,6 +56,7 @@
     "@storybook/react": "^7.0.2",
     "@storybook/react-vite": "^7.0.2",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "@svgr/webpack": "^7.0.0",
     "@testing-library/dom": "8.20.0",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "13.4.0",

@@ -51,6 +51,7 @@
     "jsx-a11y"
   ],
   "rules": {
+    "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/ban-ts-comment": "off",
     "no-console": "error",
     "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
