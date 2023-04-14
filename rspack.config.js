@@ -65,9 +65,13 @@ const configRoot = defineConfig((env, argv) => {
       html: [
         {
           template: './public/index.html',
-          favicon: './public/favicon.png'
+          favicon: './public/favicon.png',
+          minify: !isLocal
         }
-      ]
+      ],
+      react: {
+        refresh: isLocal
+      }
     },
     target: 'web'
   }
