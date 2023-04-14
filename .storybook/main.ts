@@ -1,33 +1,17 @@
-import type { StorybookConfig } from "@storybook/react-vite"
+import type {StorybookConfig} from '@storybook/react-vite'
 
 const config: StorybookConfig = {
   stories: ['../src/ui/@(components|templates)/**/storybook/stories.@(js|ts)x'],
-  addons: ["@storybook/addon-links", '@storybook/addon-essentials', "@storybook/addon-interactions"],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-a11y',
+    'storybook-mobile',
+    'storybook-dark-mode'
+  ],
   core: {
     disableTelemetry: true
   },
-  previewHead: head => `
-    ${head}
-    <style>
-      #root {
-        display: grid !important;
-        height: 100% !important;
-        width: 100% !important;
-        justify-content: center !important;
-        align-items: center;
-      }
-
-      @media screen and (min-width: 90rem) {
-        #root {
-          padding: 3rem!important;
-        }
-      }
-
-      .sbdocs-p {
-        font-size: 17px !important;
-      }
-    </style>
-  `,
   framework: {
     name: '@storybook/react-vite',
     options: {}
