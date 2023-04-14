@@ -14,7 +14,8 @@ const colors = {
   blueDark: '#001c33',
   blueLight: '#e9f4fe',
   disabled: '#a1a4b0',
-  overlay: '#000000b3'
+  overlay: '#000000b3',
+  focus: '#007dfa99'
 }
 
 export default colors
