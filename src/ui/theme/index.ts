@@ -1,12 +1,14 @@
-import borders from 'ui/theme/borders'
-import grids from 'ui/theme/grids'
-import layers from 'ui/theme/layers'
+import borderRadius from './borderRadius'
+import grids from './grids'
+import zIndex from './zIndex'
 import animations from './animations'
 import breakpoints from './breakpoints'
+import boxShadows from './boxShadows'
 import colors from './colors'
 import spacings from './spacings'
-import fonts from './typographies'
+import fonts from './fonts'
 import windowSizes from './windowSizes'
+import states from './states'
 
 const T = {
   colors,
@@ -14,10 +16,12 @@ const T = {
   spacings,
   animations,
   breakpoints,
+  boxShadows,
   windowSizes,
   grids,
-  borders,
-  layers
+  borderRadius,
+  zIndex,
+  states
 } as const
 
 export default T
