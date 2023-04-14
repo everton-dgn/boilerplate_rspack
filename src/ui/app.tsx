@@ -1,13 +1,13 @@
 import { BrowserRouter } from 'react-router-dom'
 import Routes from 'main/routes'
-import { MainProviders } from 'ui/providers'
+import { MainProvider } from 'ui/providers'
 
 const App = () => (
-  <MainProviders>
+  <MainProvider>
     <BrowserRouter>
       <Routes />
     </BrowserRouter>
-  </MainProviders>
+  </MainProvider>
 )
 
 export default App

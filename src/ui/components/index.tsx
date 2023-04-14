@@ -3,7 +3,7 @@ import { lazy } from 'react'
 
 // atoms
 export { default as Button } from './atoms/Button'
-export * from './atoms/ErrorBoundary'
+export { default as ErrorBoundary } from './atoms/ErrorBoundary'
 
 // molecules
 

@@ -1,4 +1,4 @@
-export const spacings = {
+const spacings = {
   xxSmall: '4px',
   xSmall: '8px',
   small: '12px',
@@ -9,3 +9,5 @@ export const spacings = {
   xxxLarge: '32px',
   xtreme: '40px'
 }
+
+export default spacings
