@@ -1,10 +1,12 @@
 import { GlobalStyles } from 'ui/globalStyles'
 import * as C from 'ui/components'
-import { MainProvidersProps } from './types'
+import { MainProviderProps } from './types'
 
-export const MainProviders = ({ children }: MainProvidersProps) => (
+const MainProvider = ({ children }: MainProviderProps) => (
   <C.ErrorBoundary>
     {children}
     <GlobalStyles />
   </C.ErrorBoundary>
 )
+
+export default MainProvider

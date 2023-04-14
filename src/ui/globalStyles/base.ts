@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 import T from 'ui/theme'
 
-export const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   * {
     padding: 0;
     margin: 0;
@@ -81,3 +81,5 @@ export const GlobalStyles = createGlobalStyle`
     scrollbar-width: 16px !important;
   }
 `
+
+export default GlobalStyles

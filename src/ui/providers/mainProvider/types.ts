@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
 
-export type MainProvidersProps = {
+export type MainProviderProps = {
   children: ReactNode
 }

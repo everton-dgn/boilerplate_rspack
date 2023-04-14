@@ -1,4 +1,4 @@
-export const colors = {
+const colors = {
   primary: '#334bc8',
   secondary: '#fff',
   primaryHover: '#5872ff',
@@ -16,3 +16,5 @@ export const colors = {
   disabled: '#a1a4b0',
   overlay: '#000000b3'
 }
+
+export default colors

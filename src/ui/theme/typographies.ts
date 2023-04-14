@@ -1,4 +1,4 @@
-export const fonts = {
+const fonts = {
   family:
     "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
   normal: 400,
@@ -12,3 +12,5 @@ export const fonts = {
     xxLarge: '4rem'
   }
 }
+
+export default fonts
