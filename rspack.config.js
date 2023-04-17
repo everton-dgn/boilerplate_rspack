@@ -12,14 +12,12 @@ const configRoot = defineConfig((env, argv) => {
 
   return {
     mode,
-    entry: './src/main/index.tsx',
+    entry: './src/ui/index.tsx',
     devtool: isLocal ? 'eval-source-map' : false,
     output: {
       clean: true,
       publicPath: `${PUBLIC_PATH}/`,
-      chunkFilename: isLocal ? '[name][ext]' : '[name].[contenthash:8][ext]',
-      chunkLoadingGlobal: 'rspackChunkLoadCustomConfig',
-      crossOriginLoading: 'anonymous'
+      chunkFilename: isLocal ? '[name][ext]' : '[name].[contenthash:8][ext]'
     },
     optimization: {
       runtimeChunk: 'single',
@@ -53,7 +51,7 @@ const configRoot = defineConfig((env, argv) => {
         {
           test: /\.svg$/i,
           issuer: /\.tsx?$/,
-          use: ['@svgr/webpack']
+          use: [{ loader: '@svgr/webpack', options: { exportType: 'named' } }]
         }
       ]
     },

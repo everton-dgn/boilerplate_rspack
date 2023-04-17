@@ -27,8 +27,8 @@ const GlobalStyles = createGlobalStyle`
   body,
   html,
   #root {
-    background-color: ${T.colors.secondary};
-    color: ${T.colors.black};
+    background-image: linear-gradient(45deg, ${T.colors.dark}, ${T.colors.secondary}, ${T.colors.primary});
+    color: ${T.colors.white};
   }
 
   p, h1, h2, h3, h4, h5, h6 {
@@ -41,13 +41,14 @@ const GlobalStyles = createGlobalStyle`
   select,
   textarea,
   button {
-    font: ${T.fonts.normal} ${T.fonts.sizes.medium} Inter, sans-serif;
+    font: ${T.fonts.weights.medium} ${T.fonts.sizes.xs} Inter, sans-serif;
+    font-family: ${T.fonts.family};
   }
 
   button {
     cursor: pointer;
     border: none;
-    border-radius: ${T.borders.radius};
+    border-radius: ${T.borderRadius.sm};
   }
 
   #root {

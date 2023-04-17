@@ -3,10 +3,10 @@ import * as S from './styles'
 
 const DefaultTemplate = () => (
   <S.Grid>
-    <S.Header role="banner">Template Default</S.Header>
-    <div>
+    <S.Header role="banner">Boilerplate</S.Header>
+    <S.ContainerPage>
       <Outlet />
-    </div>
+    </S.ContainerPage>
   </S.Grid>
 )
 

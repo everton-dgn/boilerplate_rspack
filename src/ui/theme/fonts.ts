@@ -1,11 +1,10 @@
 const fonts = {
   family:
-    "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    "'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
   weights: {
-    bold: 600,
-    semiBold: 500,
-    medium: 400,
-    regular: 300
+    semiBold: 600,
+    medium: 500,
+    regular: 400
   },
   sizes: {
     xxxs: '1.2rem',

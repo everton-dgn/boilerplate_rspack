@@ -6,7 +6,7 @@ const breakpoints = {
   mobile: device(windowSizes.sm),
   tablet: device(windowSizes.md),
   desktop: device(windowSizes.lg),
-  custom: (value: number) => device(value)
+  custom: (width: number) => device(width)
 }
 
 export default breakpoints

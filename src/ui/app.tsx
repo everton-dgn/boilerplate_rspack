@@ -1,13 +1,14 @@
-import { BrowserRouter } from 'react-router-dom'
-import Routes from 'main/routes'
+import { Suspense } from 'react'
+import { RouterProvider } from 'react-router-dom'
+import router from 'ui/routes'
 import { MainProvider } from 'ui/providers'
 
 const App = () => (
-  <MainProvider>
-    <BrowserRouter>
-      <Routes />
-    </BrowserRouter>
-  </MainProvider>
+  <Suspense fallback={<h1>Loading...</h1>}>
+    <MainProvider>
+      <RouterProvider router={router} />
+    </MainProvider>
+  </Suspense>
 )
 
 export default App
