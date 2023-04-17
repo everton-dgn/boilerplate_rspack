@@ -4,7 +4,6 @@ import viewports from './viewports'
 
 export const parameters = {
   layout: 'centered',
-  MainProvider,
   darkMode,
   viewport: {
     viewports
@@ -12,5 +11,9 @@ export const parameters = {
 }
 
 export const decorators = [
-  Story => <Story/>
+  Story => (
+    <MainProvider>
+      <Story/>
+    </MainProvider>
+  )
 ]

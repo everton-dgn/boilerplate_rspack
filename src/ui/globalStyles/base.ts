@@ -24,8 +24,6 @@ const GlobalStyles = createGlobalStyle`
     font-size: 62.5%;
   }
 
-  body,
-  html,
   #root {
     background-image: linear-gradient(45deg, ${T.colors.dark}, ${T.colors.secondary}, ${T.colors.primary});
     color: ${T.colors.white};
