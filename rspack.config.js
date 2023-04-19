@@ -1,11 +1,9 @@
 // @ts-check
 const { defineConfig } = require('@rspack/cli')
-const { config } = require('dotenv')
+const { config } = require('dotenv');
+const { parsed } = config({ path: process.env.ENV_FILE })
 
-const configRoot = defineConfig((env, argv) => {
-  const { parsed } = config({
-    path: argv.dotenv
-  })
+const configRoot = defineConfig(() => {
   const { PUBLIC_PATH, PORT, ENVIRONMENT } = parsed
   const isLocal = ENVIRONMENT === 'LOCAL'
   const mode = isLocal ? 'development' : 'production'
@@ -15,9 +13,9 @@ const configRoot = defineConfig((env, argv) => {
     entry: './src/ui/index.tsx',
     devtool: isLocal ? 'eval-source-map' : false,
     output: {
-      clean: true,
-      publicPath: `${PUBLIC_PATH}/`,
-      chunkFilename: isLocal ? '[name][ext]' : '[name].[contenthash:8][ext]'
+      clean: isLocal,
+      chunkFilename: isLocal ? '[name][ext]' : '[name].[contenthash:8][ext]',
+      publicPath: `${PUBLIC_PATH}/`
     },
     optimization: {
       runtimeChunk: 'single',
@@ -58,7 +56,7 @@ const configRoot = defineConfig((env, argv) => {
     builtins: {
       define: {
         targets: ['es2022'],
-        'process.env': JSON.stringify(parsed)
+        'process.env': parsed
       },
       html: [
         {

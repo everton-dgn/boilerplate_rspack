@@ -8,10 +8,10 @@
   "repository": "https://github.com/everton-dgn/boilerplate_rspack",
   "main": "./src/index.js",
   "scripts": {
-    "dev": "NODE_ENV=development rspack serve --dotenv .env.local",
-    "build:local": "NODE_ENV=development rspack build --dotenv .env.local",
-    "build:dev": "NODE_ENV=production rspack build --dotenv .env.dev",
-    "build:prod": "NODE_ENV=production rspack build --dotenv .env.prod",
+    "dev": "NODE_ENV=development ENV_FILE=.env.local rspack serve",
+    "build:local": "NODE_ENV=development ENV_FILE=.env.local rspack build",
+    "build:dev": "NODE_ENV=production ENV_FILE=.env.dev rspack build",
+    "build:prod": "NODE_ENV=production ENV_FILE=.env.prod rspack build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "lint": "eslint --cache src --ext ts,tsx,json --max-warnings=0",
@@ -25,7 +25,7 @@
     "test:w": "vitest",
     "test:ci": "vitest run",
     "generate": "yarn plop --plopfile componentGenerator/plopfile.js",
-    "analyze": "NODE_ENV=production rspack build --analyze --dotenv .env.prod",
+    "analyze": "NODE_ENV=production ENV_FILE=.env.prod rspack build --analyze",
     "check:update": "yarn upgrade-interactive --latest",
     "prepare": "husky install"
   },
@@ -49,7 +49,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.6.1",
     "@commitlint/config-conventional": "17.6.1",
-    "@rspack/cli": "^0.1.7",
+    "@rspack/cli": "^0.1.8",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/git": "^10.0.1",
