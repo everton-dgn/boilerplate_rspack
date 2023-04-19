@@ -9,3 +9,4 @@ componentGenerator
 coverage
 storybook-static
 .tsBuildInfoFile
+rspack.config.js

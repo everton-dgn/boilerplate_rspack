@@ -12,14 +12,14 @@ const Home = () => {
   return (
     <S.Container>
       <S.WrapperImages>
-        <img src={LogoRsPack} alt="Logo Rspack" />
+        <img alt="Logo Rspack" src={LogoRsPack} />
         <LogoReact role="img" title="Logo React" />
       </S.WrapperImages>
       <S.Title>Rspack + React</S.Title>
       <C.Button
-        text={`COUNT: ${count}`}
         aria-label={`COUNT: ${count}`}
         onClick={() => setCount(prevState => prevState + 1)}
+        text={`COUNT: ${count}`}
       />
     </S.Container>
   )
