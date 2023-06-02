@@ -14,7 +14,7 @@ const configRoot = defineConfig(() => {
     devtool: isLocal ? 'eval-source-map' : false,
     output: {
       clean: isLocal,
-      chunkFilename: isLocal ? '[name][ext]' : '[name].[contenthash:8][ext]',
+      chunkFilename: isLocal ? '[name].js' : '[name].[contenthash:8].js',
       publicPath: `${PUBLIC_PATH}/`
     },
     optimization: {
