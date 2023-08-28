@@ -13,10 +13,19 @@ const GlobalStyles = createGlobalStyle`
     outline: none;
     font-family: ${T.fonts.family};
     line-height: calc(1em + 0.5rem);
+  }
 
-    @media (prefers-reduced-motion) {
-      transition: none!important;
-      animation-duration: 0ms!important;
+  @media (prefers-reduced-motion: reduce) {
+    body *,
+    body *::before,
+    body *::after {
+      animation-delay: -1ms !important;
+      animation-duration: 1ms !important;
+      animation-iteration-count: 1 !important;
+      background-attachment: initial !important;
+      scroll-behavior: auto !important;
+      transition-delay: -1ms !important;
+      transition-duration: 1ms !important;
     }
   }
 
@@ -25,6 +34,11 @@ const GlobalStyles = createGlobalStyle`
   }
 
   #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+    isolation: isolate;
     background-image: linear-gradient(45deg, ${T.colors.dark}, ${T.colors.secondary}, ${T.colors.primary});
     color: ${T.colors.white};
   }
@@ -32,15 +46,23 @@ const GlobalStyles = createGlobalStyle`
   p, h1, h2, h3, h4, h5, h6 {
     word-break: break-word;
   }
+  
+  b,
+  strong {
+    font-weight: bolder;
+  }
 
   #root,
   body,
+  optgroup,
   input,
   select,
   textarea,
   button {
-    font: ${T.fonts.weights.medium} ${T.fonts.sizes.xs} Inter, sans-serif;
+    font-weight: ${T.fonts.weights.medium};
+    font-style: ${T.fonts.sizes.xs};
     font-family: ${T.fonts.family};
+    margin: 0;
   }
 
   button {
@@ -49,18 +71,43 @@ const GlobalStyles = createGlobalStyle`
     border-radius: ${T.borderRadius.sm};
   }
 
-  #root {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    min-height: 100vh;
-    isolation: isolate;
-  }
-
   a,
   a:active {
     color: inherit;
     text-decoration: none;
+  }
+
+  :focus {
+    outline: 4px solid ${T.colors.focus};
+    outline-offset: 1px;
+  }
+
+  :focus-visible {
+    outline: 4px solid ${T.colors.focus};
+    outline-offset: 1px;
+  }
+
+  :focus:not(:focus-visible) {
+    box-shadow: none;
+    outline: 0;
+  }
+
+  mark {
+    &::before,
+    &::after {
+      clip: rect(1px, 1px, 1px, 1px);
+      clip-path: inset(100%);
+      content: ' [start of highlighted text] ';
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+
+    &::after {
+      content: ' [end of highlighted text] ';
+    }
   }
 
   ::-webkit-scrollbar,
