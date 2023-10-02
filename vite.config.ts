@@ -5,5 +5,19 @@ import svgr from 'vite-plugin-svgr'
 
 export default defineConfig({
   base: '/',
-  plugins: [tsconfigPaths(), react(), svgr()]
+  plugins: [tsconfigPaths(), react(), svgr()],
+  test: {
+    coverage: {
+      exclude: [
+        'src/testHelpers/',
+        'src/ui/theme',
+        'src/ui/globalStyles',
+        'src/**/__tests__'
+      ]
+    },
+    environment: 'happy-dom',
+    globals: true,
+    passWithNoTests: true,
+    setupFiles: ['./vitest.setup.ts']
+  }
 })

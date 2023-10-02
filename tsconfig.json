@@ -24,8 +24,8 @@
     "declaration": true,
     "skipLibCheck": true,
     "incremental": true,
-    "types": ["vitest/globals"]
+    "types": ["vite/client", "vitest/globals"]
   },
-  "include": ["src", "src/@types/**/*.d.ts", "./vitest.setup.ts"],
+  "include": ["src", "./vitest.setup.ts"],
   "exclude": ["dist", "node_modules"]
 }
