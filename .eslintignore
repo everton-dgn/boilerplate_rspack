@@ -10,3 +10,6 @@ coverage
 storybook-static
 .tsBuildInfoFile
 rspack.config.js
+vitest.config.ts
+vite.config.ts
+vitest.setup.ts

@@ -11,13 +11,12 @@ export default mergeConfig(
           'src/ui/theme',
           'src/ui/globalStyles',
           'src/**/__tests__'
-        ],
-        provider: 'c8'
+        ]
       },
       environment: 'happy-dom',
       globals: true,
       passWithNoTests: true,
-      setupFiles: ['./.test/setup.ts']
+      setupFiles: ['./vitest.setup.ts']
     }
   })
 )
