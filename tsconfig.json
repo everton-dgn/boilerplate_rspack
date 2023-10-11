@@ -23,6 +23,7 @@
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "skipLibCheck": true,
+    "moduleDetection": "force",
     "incremental": true,
     "types": ["vite/client", "vitest/globals"]
   },
