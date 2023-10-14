@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": "src",
-    "outDir": "./.tsBuildInfo",
+    "outDir": "dist",
     "target": "ES2022",
     "allowJs": true,
     "esModuleInterop": true,
@@ -21,9 +21,14 @@
     "noImplicitAny": true,
     "strictNullChecks": true,
     "allowSyntheticDefaultImports": true,
+    "moduleDetection": "force",
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noUncheckedIndexedAccess": true,
+    "verbatimModuleSyntax": true,
     "declaration": true,
     "skipLibCheck": true,
-    "moduleDetection": "force",
     "incremental": true,
     "types": ["vite/client", "vitest/globals"]
   },

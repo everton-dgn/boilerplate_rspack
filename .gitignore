@@ -41,5 +41,4 @@ pnpm-lock.yaml
 /src/stories
 
 # typescript incremental features
-/.tsBuildInfo
 .eslintcache
