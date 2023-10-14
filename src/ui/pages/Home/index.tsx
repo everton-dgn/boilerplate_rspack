@@ -2,7 +2,7 @@ import { useState } from 'react'
 import useSetPageTitle from 'hooks/useSetPageTitle'
 import Button from 'ui/components/atoms/Button'
 import * as S from './styles'
-import { ReactComponent as LogoReact } from 'ui/assets/images/logoReact.svg'
+import LogoReact from 'ui/assets/images/logoReact.svg?react'
 import LogoRsPack from 'ui/assets/images/logoRspack.webp'
 
 const Home = () => {
