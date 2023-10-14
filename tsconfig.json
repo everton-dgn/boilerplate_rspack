@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": "src",
-    "outDir": "dist",
+    "outDir": "./.tsBuildInfo",
     "target": "ES2022",
     "allowJs": true,
     "esModuleInterop": true,
